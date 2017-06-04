@@ -150,7 +150,7 @@ OBJS= \
     obj/scrypt-x86_64.o
 
 
-all: LiZid
+all: Lilid
 
 test check: test_BERN FORCE
 	./test_BERN
@@ -185,7 +185,7 @@ obj/%.o: %.c
 	rm -f $(@:%.o=%.d)
 
 
-LiZid: $(OBJS:obj/%=obj/%)
+LiLid: $(OBJS:obj/%=obj/%)
 	$(LINK) $(xCXXFLAGS) -o $@ $^ $(xLDFLAGS) $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
